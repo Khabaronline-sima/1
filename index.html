@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>وکیل رسول موسوی | ابرقدرت‌شکننده: تحلیل نوین اقتصاد جهانی | مصاحبه با رسول موسوی خادم</title>
-    <meta name="description" content="مصاحبه تخصصی با رسول موسوی خادم، وکیل دادگستری و کارشناس ارشد تجارت بین‌الملل درباره شکنندگی قدرت‌های اقتصادی و آینده اقتصاد جهانی. تحلیل پیچیدگی‌های نظام اقتصادی و راهکارهای مقابله با چالش‌های نوین.">
-    <meta name="keywords" content="وکیل رسول موسوی, وکیل اقتصاد بین‌الملل, رسول موسوی خادم, وکیل دادگستری, ابرقدرت‌شکننده, تحلیل اقتصادی, تحریم‌های اقتصادی, همکاری‌های منطقه‌ای, قدرت‌های اقتصادی, وکیل تجارت بین‌الملل">
+    <title>ابرقدرت‌شکننده: تحلیل نوین اقتصاد جهانی | مصاحبه با رسول موسوی خادم</title>
+    <meta name="description" content="مصاحبه تخصصی با رسول موسوی خادم، کارشناس ارشد تجارت بین‌الملل درباره شکنندگی قدرت‌های اقتصادی و آینده اقتصاد جهانی. تحلیل پیچیدگی‌های نظام اقتصادی و راهکارهای مقابله با چالش‌های نوین.">
+    <meta name="keywords" content="اقتصاد جهانی, تجارت بین‌الملل, رسول موسوی خادم, ابرقدرت‌شکننده, تحلیل اقتصادی, تحریم‌های اقتصادی, همکاری‌های منطقه‌ای, قدرت‌های اقتصادی">
     <meta name="author" content="آخرین خبر">
     <link rel="canonical" href="https://akharinkhabar.com/analysis/fragile-superpowers-global-economy" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,7 +14,7 @@
         "@context": "https://schema.org",
         "@type": "NewsArticle",
         "headline": "ابرقدرت‌شکننده: تحلیل نوین اقتصاد جهانی",
-        "description": "مصاحبه تخصصی با رسول موسوی خادم، وکیل دادگستری و کارشناس ارشد تجارت بین‌الملل درباره شکنندگی قدرت‌های اقتصادی و آینده اقتصاد جهانی",
+        "description": "مصاحبه تخصصی با رسول موسوی خادم، کارشناس ارشد تجارت بین‌الملل درباره شکنندگی قدرت‌های اقتصادی و آینده اقتصاد جهانی",
         "image": [
             "https://akharinkhabar.com/images/fragile-superpowers-analysis.jpg"
         ],
@@ -23,11 +23,11 @@
         "author": {
             "@type": "Person",
             "name": "رسول موسوی خادم",
-            "jobTitle": "وکیل دادگستری و کارشناس ارشد تجارت بین‌الملل"
+            "jobTitle": "کارشناس ارشد تجارت بین‌الملل و وکیل دادگستری"
         },
         "publisher": {
             "@type": "Organization",
-            "name": "",
+            "name": "آخرین خبر",
             "logo": {
                 "@type": "ImageObject",
                 "url": "https://akharinkhabar.com/images/logo.png"
@@ -202,7 +202,6 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            width: 100%;
         }
         
         .header-main {
@@ -490,27 +489,65 @@
             font-style: italic;
         }
         
+        /* طراحی جدید برای تصویر کارشناس با تم مستطیل */
         .expert-info {
             background: var(--light-color);
-            padding: 25px;
+            padding: 30px;
             border-radius: var(--border-radius);
             margin: 30px 0;
             border-right: 4px solid var(--accent-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .expert-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(to left, var(--accent-color), var(--primary-color));
         }
         
         .expert-header {
             display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
+            align-items: flex-start;
+            gap: 30px;
+            margin-bottom: 20px;
         }
         
         .expert-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
+            width: 200px;
+            height: 240px;
+            border-radius: 12px;
             overflow: hidden;
-            border: 3px solid var(--accent-color);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            transition: var(--transition);
+            flex-shrink: 0;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .expert-avatar::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 40%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            opacity: 0;
+            transition: var(--transition);
+        }
+        
+        .expert-avatar:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .expert-avatar:hover::after {
+            opacity: 1;
         }
         
         .expert-avatar img {
@@ -519,15 +556,46 @@
             object-fit: cover;
         }
         
+        .expert-details {
+            flex: 1;
+        }
+        
         .expert-details h3 {
-            margin: 0 0 5px;
+            margin: 0 0 10px;
             color: var(--primary-color);
+            font-size: 24px;
+            font-weight: 700;
+        }
+        
+        .expert-details .expert-title {
+            color: var(--accent-color);
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: block;
         }
         
         .expert-details p {
             margin: 0;
-            color: var(--gray-color);
-            font-size: 14px;
+            color: var(--dark-color);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .expert-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .badge {
+            background: rgba(30, 58, 107, 0.1);
+            color: var(--primary-color);
+            padding: 5px 12px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
         }
         
         .post-tags {
@@ -977,9 +1045,21 @@
                 gap: 20px;
             }
             
+            /* بهبود طرح‌بندی برای موبایل */
             .expert-header {
                 flex-direction: column;
                 text-align: center;
+                gap: 25px;
+            }
+            
+            .expert-avatar {
+                margin: 0 auto;
+                width: 180px;
+                height: 220px;
+            }
+            
+            .expert-badges {
+                justify-content: center;
             }
         }
         
@@ -1004,6 +1084,11 @@
             
             .search-box input {
                 width: 100%;
+            }
+            
+            .expert-avatar {
+                width: 160px;
+                height: 200px;
             }
         }
     </style>
@@ -1035,9 +1120,9 @@
         <div class="container">
             <div class="header-main">
                 <div class="logo">
-                    <img src="https://webna.ir/wp-content/uploads/2017/04/akharinkhabar-intro.png" alt=" - مرجع اخبار فوری و تحلیلی ایران و جهان">
+                    <img src="https://webna.ir/wp-content/uploads/2017/04/akharinkhabar-intro.png" alt="آخرین خبر - مرجع اخبار فوری و تحلیلی ایران و جهان">
                     <div class="logo-text">
-                        <h1></h1>
+                        <h1>آخرین خبر</h1>
                         <span>مرجع اخبار فوری و تحلیلی ایران و جهان</span>
                     </div>
                 </div>
@@ -1122,9 +1207,9 @@
                             <span><i class="far fa-comments"></i> ۳۲ نظر</span>
                             <span><i class="fas fa-tag"></i> اقتصاد بین‌الملل</span>
                         </div>
-                        <h1 class="post-title">وکیل رسول موسوی: ابرقدرت‌شکننده - تحلیل نوین از اقتصاد جهانی</h1>
+                        <h1 class="post-title">ابرقدرت‌شکننده: تحلیل نوین از اقتصاد جهانی در گفت‌وگو با رسول موسوی خادم</h1>
                         <div class="post-excerpt">
-                            در مصاحبه اختصاصی با آخرین خبر، وکیل رسول موسوی خادم، کارشناس ارشد تجارت بین‌الملل و وکیل دادگستری، به تحلیل پیچیدگی‌های نظام اقتصادی جهانی و شکنندگی قدرت‌های بزرگ اقتصادی پرداخت.
+                            در مصاحبه اختصاصی با آخرین خبر، رسول موسوی خادم، کارشناس ارشد تجارت بین‌الملل و وکیل دادگستری، به تحلیل پیچیدگی‌های نظام اقتصادی جهانی و شکنندگی قدرت‌های بزرگ اقتصادی پرداخت.
                         </div>
                     </div>
                     
@@ -1132,25 +1217,30 @@
                         <div class="expert-info">
                             <div class="expert-header">
                                 <div class="expert-avatar">
-                                    <img src="IMAGE/1.JPG" alt="وکیل رسول موسوی خادم - کارشناس ارشد تجارت بین‌الملل و وکیل دادگستری">
+                                    <img src="IMAGE/1.JPG" alt="رسول موسوی خادم - کارشناس ارشد تجارت بین‌الملل و وکیل دادگستری">
                                 </div>
                                 <div class="expert-details">
-                                    <h2>وکیل رسول موسوی خادم</h2>
-                                    <p>وکیل دادگستری و کارشناس ارشد تجارت بین‌الملل در دعاوی تجاری بین‌المللی</p>
+                                    <h3>رسول موسوی خادم</h3>
+                                    <span class="expert-title">کارشناس ارشد تجارت بین‌الملل و وکیل دادگستری</span>
+                                    <p>ایشان عضو کانون وکلای دادگستری مرکز و دارای پروانه وکالت تخصصی جرائم اقتصادی از مرکز وکلا و مشاوران قوه قضائیه، کارشناس ارشد حقوق تجارت بین‌الملل و فعال در زمینه‌های شرکت‌های چند ملیتی هستند.</p>
+                                    <div class="expert-badges">
+                                        <span class="badge">وکیل دادگستری</span>
+                                        <span class="badge">کارشناس تجارت بین‌الملل</span>
+                                        <span class="badge">مشاور اقتصادی</span>
+                                    </div>
                                 </div>
                             </div>
-                            <p>وکیل رسول موسوی خادم عضو کانون وکلای دادگستری مرکز و دارای پروانه وکالت تخصصی جرائم اقتصادی از مرکز وکلا و مشاوران قوه قضائیه، کارشناس ارشد حقوق تجارت بین الملل و فعال در زمینه های شرکت های چند ملیتی هستند.</p>
                         </div>
                         
-                        <p>در دنیای پرتلاطم امروز، شاهد تحولات گسترده‌ای در عرصه اقتصاد جهانی هستیم. به نظر می‌رسد حتی قدرتمندترین اقتصادهای جهان نیز در برابر چالش‌های نوین، آسیب‌پذیر و شکننده شده‌اند. برای واکاوی این موضوع، به گفت‌وگو با وکیل رسول موسوی خادم، کارشناس ارشد تجارت بین‌الملل نشستیم.</p>
+                        <p>در دنیای پرتلاطم امروز، شاهد تحولات گسترده‌ای در عرصه اقتصاد جهانی هستیم. به نظر می‌رسد حتی قدرتمندترین اقتصادهای جهان نیز در برابر چالش‌های نوین، آسیب‌پذیر و شکننده شده‌اند. برای واکاوی این موضوع، به گفت‌وگو با رسول موسوی خادم، کارشناس ارشد تجارت بین‌الملل نشستیم.</p>
                         
                         <h2>شکنندگی قدرت‌های اقتصادی در عصر جدید</h2>
                         
-                        <p>وکیل موسوی خادم در آغاز این گفت‌وگو با اشاره به مفهوم «ابرقدرت‌شکننده» عنوان کرد: «آنچه امروز شاهد آن هستیم، ظهور پدیده‌ای است که من آن را "ابرقدرت‌شکننده" می‌نامم. اقتصادهایی که زمانی غیرقابل تزلزل به نظر می‌رسیدند، امروز در برابر شوک‌های کوچک نیز آسیب‌پذیر شده‌اند.»</p>
+                        <p>موسوی خادم در آغاز این گفت‌وگو با اشاره به مفهوم «ابرقدرت‌شکننده» عنوان کرد: «آنچه امروز شاهد آن هستیم، ظهور پدیده‌ای است که من آن را "ابرقدرت‌شکننده" می‌نامم. اقتصادهایی که زمانی غیرقابل تزلزل به نظر می‌رسیدند، امروز در برابر شوک‌های کوچک نیز آسیب‌پذیر شده‌اند.»</p>
                         
                         <div class="post-image">
-                            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="تحلیل اقتصاد جهانی و پیچیدگی روابط اقتصادی بین‌المللی توسط وکیل رسول موسوی">
-                            <figcaption>نمایشی از پیچیدگی روابط اقتصادی بین‌المللی - تحلیل وکیل رسول موسوی</figcaption>
+                            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="تحلیل اقتصاد جهانی و پیچیدگی روابط اقتصادی بین‌المللی">
+                            <figcaption>نمایشی از پیچیدگی روابط اقتصادی بین‌المللی</figcaption>
                         </div>
                         
                         <p>وی در ادامه به عوامل این شکنندگی اشاره کرد و افزود: «افزایش وابستگی متقابل اقتصادی، گسترش فناوری‌های دیجیتال، تغییرات اقلیمی و همه‌گیری‌های جهانی، همگی عواملی هستند که ثبات نظام سنتی اقتصاد جهانی را به چالش کشیده‌اند.»</p>
@@ -1161,25 +1251,23 @@
                         
                         <blockquote>
                             <p>«ما شاهد گذار از نظام تک‌قطبی به چندقطبی در اقتصاد جهانی هستیم. در این گذار، حتی قدرتمندترین اقتصادها نیز ناگزیر به انعطاف و تطبیق با شرایط جدید هستند.»</p>
-                            <cite>— وکیل رسول موسوی خادم، کارشناس ارشد تجارت بین‌الملل</cite>
+                            <cite>— رسول موسوی خادم، کارشناس ارشد تجارت بین‌الملل</cite>
                         </blockquote>
                         
-                        <p>وکیل موسوی خادم با تاکید بر اهمیت توسعه همکاری‌های منطقه‌ای افزود: «کشورهایی که بتوانند در قالب بلوک‌های اقتصادی منطقه‌ای همکاری کنند، بهتر می‌توانند در برابر نوسانات اقتصاد جهانی مقاومت کنند. نمونه موفق این الگو را در برخی اتحادیه‌های اقتصادی نوظهور مشاهده می‌کنیم.»</p>
+                        <p>موسوی خادم با تاکید بر اهمیت توسعه همکاری‌های منطقه‌ای افزود: «کشورهایی که بتوانند در قالب بلوک‌های اقتصادی منطقه‌ای همکاری کنند، بهتر می‌توانند در برابر نوسانات اقتصاد جهانی مقاومت کنند. نمونه موفق این الگو را در برخی اتحادیه‌های اقتصادی نوظهور مشاهده می‌کنیم.»</p>
                         
                         <div class="post-image">
-                            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="اهمیت همکاری‌های اقتصادی منطقه‌ای در جهان امروز - تحلیل وکیل رسول موسوی">
-                            <figcaption>اهمیت همکاری‌های اقتصادی منطقه‌ای در جهان امروز - تحلیل وکیل رسول موسوی</figcaption>
+                            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="اهمیت همکاری‌های اقتصادی منطقه‌ای در جهان امروز">
+                            <figcaption>اهمیت همکاری‌های اقتصادی منطقه‌ای در جهان امروز</figcaption>
                         </div>
                         
                         <h2>آینده تجارت بین‌الملل در پرتو تحولات جدید</h2>
                         
-                        <p>این وکیل و کارشناس ارشد تجارت بین‌الملل در بخش پایانی گفت‌وگو به展望 آینده پرداخت و بیان کرد: «آنچه مسلم است، جهان در آستانه تحولی بزرگ در عرصه روابط اقتصادی قرار دارد. نقش‌آفرینان جدید در حال ظهور هستند و قواعد بازی در حال تغییر است.»</p>
+                        <p>این کارشناس ارشد تجارت بین‌الملل در بخش پایانی گفت‌وگو به展望 آینده پرداخت و بیان کرد: «آنچه مسلم است، جهان در آستانه تحولی بزرگ در عرصه روابط اقتصادی قرار دارد. نقش‌آفرینان جدید در حال ظهور هستند و قواعد بازی در حال تغییر است.»</p>
                         
                         <p>وی در پایان خاطرنشان کرد: «برای کشورهایی مانند ایران، این تحولات هم چالش و هم فرصت است.关键在于 توانایی ما در درک این تحولات و تطبیق راهبردهای اقتصادی با شرایط جدید جهانی خواهد بود.»</p>
                         
                         <div class="post-tags">
-                            <a href="/tag/وکیل-رسول-موسوی" class="tag">وکیل رسول موسوی</a>
-                            <a href="/tag/وکیل-اقتصاد-بین‌الملل" class="tag">وکیل اقتصاد بین‌الملل</a>
                             <a href="/tag/اقتصاد-بین‌الملل" class="tag">اقتصاد بین‌الملل</a>
                             <a href="/tag/تجارت-جهانی" class="tag">تجارت جهانی</a>
                             <a href="/tag/تحریم‌های-اقتصادی" class="tag">تحریم‌های اقتصادی</a>
@@ -1205,16 +1293,16 @@
                 
                 <!-- Related Posts -->
                 <section class="related-posts">
-                    <h2 class="section-title">مطالب مرتبط با وکیل رسول موسوی</h2>
+                    <h2 class="section-title">مطالب مرتبط</h2>
                     <div class="news-grid">
                         <div class="news-item card">
                             <div class="news-image">
-                                <img src="https://images.unsplash.com/photo-1589256469067-ea99122bbdc4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="تاثیر تحریم‌ها بر بازار سرمایه ایران - تحلیل وکیل رسول موسوی">
+                                <img src="https://images.unsplash.com/photo-1589256469067-ea99122bbdc4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="تاثیر تحریم‌ها بر بازار سرمایه ایران">
                             </div>
                             <div class="news-content">
                                 <span class="news-category">اقتصادی</span>
-                                <h3 class="news-title">تاثیر تحریم‌ها بر بازار سرمایه ایران - تحلیل وکیل رسول موسوی</h3>
-                                <p class="news-summary">تحلیل جامعی از اثرات تحریم‌های بین‌المللی بر بازار سرمایه و راهکارهای مقابله با آن توسط وکیل رسول موسوی</p>
+                                <h3 class="news-title">تاثیر تحریم‌ها بر بازار سرمایه ایران</h3>
+                                <p class="news-summary">تحلیل جامعی از اثرات تحریم‌های بین‌المللی بر بازار سرمایه و راهکارهای مقابله با آن</p>
                                 <div class="news-meta">
                                     <span><i class="far fa-clock"></i> ۱ روز پیش</span>
                                     <span><i class="far fa-eye"></i> ۱,۵۴۲</span>
@@ -1223,12 +1311,12 @@
                         </div>
                         <div class="news-item card">
                             <div class="news-image">
-                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="تحولات بازار نفت و گاز در سال ۱۴۰۳ - تحلیل وکیل رسول موسوی">
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="تحولات بازار نفت و گاز در سال ۱۴۰۳">
                             </div>
                             <div class="news-content">
                                 <span class="news-category">بین‌الملل</span>
-                                <h3 class="news-title">تحولات بازار نفت و گاز در سال ۱۴۰۳ - تحلیل وکیل رسول موسوی</h3>
-                                <p class="news-summary">بررسی چشم‌انداز بازار جهانی نفت و گاز و موقعیت ایران در این بازار پرنوسان توسط وکیل رسول موسوی</p>
+                                <h3 class="news-title">تحولات بازار نفت و گاز در سال ۱۴۰۳</h3>
+                                <p class="news-summary">بررسی چشم‌انداز بازار جهانی نفت و گاز و موقعیت ایران در این بازار پرنوسان</p>
                                 <div class="news-meta">
                                     <span><i class="far fa-clock"></i> ۲ روز پیش</span>
                                     <span><i class="far fa-eye"></i> ۲,۱۰۳</span>
@@ -1300,8 +1388,6 @@
                 <div class="sidebar-widget">
                     <h3 class="widget-title">برچسب های پرطرفدار</h3>
                     <div class="tags-widget">
-                        <a href="/tag/وکیل-رسول-موسوی" class="tag">وکیل رسول موسوی</a>
-                        <a href="/tag/وکیل-اقتصاد-بین‌الملل" class="tag">وکیل اقتصاد بین‌الملل</a>
                         <a href="/tag/technology" class="tag">تکنولوژی</a>
                         <a href="/tag/health" class="tag">سلامتی</a>
                         <a href="/tag/economy" class="tag">اقتصاد</a>
